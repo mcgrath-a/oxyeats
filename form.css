@@ -100,6 +100,21 @@
     color: white;
     animation: status 4s ease forwards;
   }
+  #popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: red;
+    border: 1px solid #ccc;
+    z-index: 999;
+    font-family: "Arial";
+    font-weight: 700;
+    color: white rgb(23, 21, 21);
+    /* Add additional styles here */
+  }
+
   @keyframes status {
     0% {
       opacity: 1;
@@ -113,6 +128,8 @@
       opacity: 0;
       pointer-events: none;
     }
+
+
   }
 
   

@@ -7,9 +7,24 @@
 <title>Oxy Eats</title>
 <link rel="icon" type="image/x-icon" href="images/oxyeatslogo.jpeg">
 <script src="https://unpkg.com/@botpoison/browser" async></script>
+
+
 </head>
+
 <body>
+    
+
     <section>
+      
+      <div id="popup" >
+        
+        <h1>Attention!</h1>
+        <br>
+        <p>Please Check Oxy Eats Hours to make sure they are making deliveries at this time.</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+
+
         <div class="container">
             <form action="https://submit-form.com/THM9f3Zw"
                 data-botpoison-public-key="pk_e12c7e83-2ac0-46f2-9350-b62bcaf7acfb" >
@@ -79,7 +94,65 @@
         </div>
         <div id="status"></div>
       </section>
-
-      
 </body>
+
+<script>
+var currentDate = new Date();
+
+  function closePopup() {
+   
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    console.log(currentDate);
+
+  }
+
+function showPopUp(){
+
+var currentDate = new Date();
+console.log(currentDate);
+
+//0 is sunday 
+if ((currentDate.getDay() === 0 && currentDate.getHours() >= 17.5 && currentDate.getHours() <= 18) ||
+   (currentDate.getDay() === 1 && currentDate.getHours() >= 4 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 2 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 3 && currentDate.getHours() >= 4 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 4 && currentDate.getHours() >= 17.5 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 5 && currentDate.getHours() >= 16 && currentDate.getHours() <= 20) ||
+   (currentDate.getDay() === 6 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5)){
+ // If the current day and time meet the conditions, show the pop-up
+ // Use the code to show the pop-up here
+ document.getElementById("popup").style.display = "none";
+         //var popup = document.getElementById("popup");
+        // popup.style.display = "block";
+
+
+}else{
+  document.getElementById("popup").style.display = "block";
+  console.log("this means alexis is not making deliveries");
+}
+
+
+
+}
+    
+
+showPopUp();
+
+   
+ 
+
+
+ // Run the checkTime function when the page loads
+ 
+
+
+</script>
+
+
+
+
+
+
+ 
 </html>
