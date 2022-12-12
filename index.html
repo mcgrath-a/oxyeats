@@ -19,9 +19,10 @@
       <div id="popup" >
         
         <h1>Attention!</h1>
+       
+        <p>Please check Oxy Eats Hours to ensure they are making deliveries at this time.</p>
         <br>
-        <p>Please Check Oxy Eats Hours to make sure they are making deliveries at this time.</p>
-        <button onclick="closePopup()">Close</button>
+        <button type = "close" onclick="closePopup()">Close</button>
       </div>
 
 
@@ -114,9 +115,9 @@ console.log(currentDate);
 
 //0 is sunday 
 if ((currentDate.getDay() === 0 && currentDate.getHours() >= 17.5 && currentDate.getHours() <= 18) ||
-   (currentDate.getDay() === 1 && currentDate.getHours() >= 4 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 1 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5) ||
    (currentDate.getDay() === 2 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5) ||
-   (currentDate.getDay() === 3 && currentDate.getHours() >= 4 && currentDate.getHours() <= 22.5) ||
+   (currentDate.getDay() === 3 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5) ||
    (currentDate.getDay() === 4 && currentDate.getHours() >= 17.5 && currentDate.getHours() <= 22.5) ||
    (currentDate.getDay() === 5 && currentDate.getHours() >= 16 && currentDate.getHours() <= 20) ||
    (currentDate.getDay() === 6 && currentDate.getHours() >= 12 && currentDate.getHours() <= 22.5)){

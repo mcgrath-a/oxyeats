@@ -111,8 +111,29 @@
     z-index: 999;
     font-family: "Arial";
     font-weight: 700;
+    text-align: center;
     color: white rgb(23, 21, 21);
     /* Add additional styles here */
+  }
+
+    
+  button[type="close"] {
+    width: 10%;
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: grey;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s ease background-color;
+  }
+
+  button[type="close"]:hover {
+    background-color: rgb(40, 41, 41);
   }
 
   @keyframes status {
